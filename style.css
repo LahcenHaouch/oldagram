@@ -78,3 +78,31 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/* custom */
+
+.container {
+  max-width: 350px;
+  margin-inline: auto;
+}
+
+header {
+  padding: 16px;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 127px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
