@@ -81,6 +81,20 @@ h6 {
 
 /* custom */
 
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+h2,
+p {
+  font-size: 0.8rem;
+}
+
+h3 {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
 .container {
   max-width: 350px;
   margin-inline: auto;
@@ -105,4 +119,36 @@ header > div {
   width: 34px;
   height: 34px;
   border-radius: 50%;
+}
+
+#posts {
+  padding: 0;
+}
+
+.post {
+  padding-block: 16px;
+}
+
+.post-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.post-body {
+  margin-bottom: 12px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.post-actions > img {
+  width: 20px;
+}
+
+.bold {
+  font-weight: bold;
 }

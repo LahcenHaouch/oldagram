@@ -1,4 +1,4 @@
-const posts = [
+const POSTS = [
   {
     name: "Vincent van Gogh",
     username: "vincey1853",
@@ -28,3 +28,10 @@ const posts = [
     likes: 152,
   },
 ];
+
+const postsElement = document.querySelector("#posts");
+
+POSTS.forEach((post) => {
+  const newPost = document.createElement("li");
+  newPost.classList.add("container");
+});

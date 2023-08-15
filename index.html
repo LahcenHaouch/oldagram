@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
     <title>Oldagram</title>
@@ -15,6 +21,30 @@
         <img class="avatar" src="./images/user-avatar.png" alt="avatar" />
       </div>
     </header>
-    <main></main>
+    <main>
+      <ul id="posts">
+        <li class="post">
+          <div class="post-header container">
+            <img class="avatar" src="images/avatar-vangogh.jpg" />
+            <div>
+              <h2>Vincent van Gogh</h2>
+              <h3>Zudert, Netherlands</h3>
+            </div>
+          </div>
+          <img class="post-body" src="images/post-vangogh.jpg" />
+          <div class="post-footer container">
+            <div class="post-actions">
+              <img src="images/icon-heart.png" alt="" />
+              <img src="images/icon-comment.png" alt="" />
+              <img src="images/icon-dm.png" alt="" />
+            </div>
+            <p class="bold">21,492 likes</p>
+            <p>
+              <span class="bold">vincey1853</span> just took a few mushrooms lol
+            </p>
+          </div>
+        </li>
+      </ul>
+    </main>
   </body>
 </html>
