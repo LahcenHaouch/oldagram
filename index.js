@@ -30,9 +30,9 @@ const POSTS = [
 ];
 
 const ACTIONS = [
-  "images/icon-heart.png",
-  "images/icon-comment.png",
-  "images/icon-dm.png",
+  { src: "images/icon-heart.png", className: "heart" },
+  { src: "images/icon-comment.png", className: "comment" },
+  { src: "images/icon-dm.png", className: "dm" },
 ];
 
 const postsElement = document.querySelector("#posts");
@@ -72,7 +72,8 @@ POSTS.forEach((post) => {
 
   ACTIONS.forEach((action) => {
     const actionEl = document.createElement("img");
-    actionEl.setAttribute("src", action);
+    actionEl.setAttribute("src", action.src);
+    actionEl.classList.add("action", action.className);
     postActions.append(actionEl);
   });
 

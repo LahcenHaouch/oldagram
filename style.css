@@ -83,6 +83,9 @@ h6 {
 
 body {
   font-family: "Source Sans 3", sans-serif;
+  max-width: 375px;
+  margin-inline: auto;
+  background-color: #c6c6c6;
 }
 
 h2,
@@ -103,6 +106,7 @@ h3 {
 header {
   padding: 16px;
   border-bottom: 1px solid #c6c6c6;
+  background-color: white;
 }
 
 header > div {
@@ -124,6 +128,7 @@ header > div {
 #posts {
   padding: 0;
   background-color: #c6c6c6;
+  list-style: none;
 }
 
 .post {
@@ -154,4 +159,23 @@ header > div {
 
 .bold {
   font-weight: bold;
+}
+
+.action {
+  cursor: pointer;
+}
+
+.heart:hover {
+  border-bottom: 3px red solid;
+  margin-bottom: -3px;
+}
+
+.comment:hover {
+  border-bottom: 3px blue solid;
+  margin-bottom: -3px;
+}
+
+.dm:hover {
+  border-bottom: 3px green solid;
+  margin-bottom: -3px;
 }
