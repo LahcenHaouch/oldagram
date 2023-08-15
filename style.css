@@ -123,10 +123,13 @@ header > div {
 
 #posts {
   padding: 0;
+  background-color: #c6c6c6;
 }
 
 .post {
   padding-block: 16px;
+  background-color: white;
+  margin-bottom: 24px;
 }
 
 .post-header {

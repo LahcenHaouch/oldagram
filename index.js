@@ -29,9 +29,67 @@ const POSTS = [
   },
 ];
 
+const ACTIONS = [
+  "images/icon-heart.png",
+  "images/icon-comment.png",
+  "images/icon-dm.png",
+];
+
 const postsElement = document.querySelector("#posts");
 
 POSTS.forEach((post) => {
   const newPost = document.createElement("li");
-  newPost.classList.add("container");
+  newPost.classList.add("post");
+
+  // post header
+
+  const postHeader = document.createElement("div");
+  postHeader.classList.add("post-header", "container");
+  const postHeaderAvatar = document.createElement("img");
+  postHeaderAvatar.classList.add("avatar");
+  postHeaderAvatar.setAttribute("src", post.avatar);
+  const postHeaderTitle = document.createElement("div");
+  const postName = document.createElement("h2");
+  postName.textContent = post.name;
+  const postLocation = document.createElement("h3");
+  postLocation.textContent = post.location;
+
+  postHeader.append(postHeaderAvatar, postHeaderTitle);
+  postHeaderTitle.append(postName, postLocation);
+
+  // post body
+
+  const postBody = document.createElement("img");
+  postBody.classList.add("post-body");
+  postBody.setAttribute("src", post.post);
+
+  // post footer
+
+  const postFooter = document.createElement("div");
+  postFooter.classList.add("post-footer", "container");
+  const postActions = document.createElement("div");
+  postActions.classList.add("post-actions");
+
+  ACTIONS.forEach((action) => {
+    const actionEl = document.createElement("img");
+    actionEl.setAttribute("src", action);
+    postActions.append(actionEl);
+  });
+
+  const postLike = document.createElement("p");
+  postLike.classList.add("bold");
+  postLike.textContent = `${post.likes} likes`;
+
+  const postComment = document.createElement("p");
+  const spanEl = document.createElement("span");
+  spanEl.classList.add("bold");
+  spanEl.textContent = post.username;
+
+  postComment.append(spanEl, " just took a few mushrooms lol");
+
+  postFooter.append(postActions, postLike, postComment);
+  //
+
+  newPost.append(postHeader, postBody, postFooter);
+  postsElement.append(newPost);
 });
